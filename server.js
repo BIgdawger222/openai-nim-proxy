@@ -59,9 +59,9 @@ app.post('/v1/chat/completions', async (req, res) => {
 let thinkingParams = undefined;
 if (ENABLE_THINKING_MODE) {
   if (nimModel.includes('glm')) {
-    thinkingParams = { enable_thinking: true, clear_thinking: true };
+    thinkingParams = { thinking: true };
   } else if (nimModel.includes('deepseek-v4')) {
-    thinkingParams = { thinking: true, reasoning_effort: "low" };
+    thinkingParams = { thinking: true, reasoning_effort: "high" };
   }
 }
 
