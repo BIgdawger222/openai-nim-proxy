@@ -63,6 +63,8 @@ if (ENABLE_THINKING_MODE) {
     thinkingParams = { thinking: true };
   } else if (nimModel.includes('deepseek-v4')) {
     thinkingParams = { thinking: true, reasoning_effort: "high" };
+  } else if (nimModel.includes('kimi')) {
+    thinkingParams = { thinking: true };
   }
 }
 
