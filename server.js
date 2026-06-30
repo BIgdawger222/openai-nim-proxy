@@ -24,7 +24,8 @@ const MODEL_MAPPING = {
   "gemini-pro": "qwen/qwen3-next-80b-a3b-thinking",
   "glm-5": "z-ai/glm-5.1",
   "deepseek-v4": "deepseek-ai/deepseek-v4-flash",
-  "kimi": "moonshotai/kimi-k2.6"
+  "kimi": "moonshotai/kimi-k2.6",
+  "minimax": "minimaxai/minimax-m3"
 };
 
 app.get('/health', (req, res) => {
