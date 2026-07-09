@@ -61,7 +61,7 @@ app.post('/v1/chat/completions', async (req, res) => {
 let thinkingParams = undefined;
 if (ENABLE_THINKING_MODE) {
   if (nimModel.includes('glm')) {
-    thinkingParams = {};
+    thinkingParams = { reasoning_effort: "max" };
   } else if (nimModel.includes('deepseek-v4')) {
     thinkingParams = { thinking: true, reasoning_effort: "high" };
   } else if (nimModel.includes('kimi')) {
