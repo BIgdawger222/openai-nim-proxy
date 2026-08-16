@@ -26,7 +26,7 @@ const MODEL_MAPPING = {
   "deepseek-v4": "deepseek-ai/deepseek-v4-pro",
   "kimi": "moonshotai/kimi-k2.6",
   "minimax": "minimaxai/minimax-m3",
-  "nemotron": "nvidia/nemotron-3.5-lightning"
+  "nemotron": "nvidia/nemotron-3.5-lightning-30b-a3b"
 };
 
 app.get('/health', (req, res) => {
@@ -70,7 +70,7 @@ if (ENABLE_THINKING_MODE) {
   } else if (nimModel.includes('minimax')) {
     thinkingParams = { thinking_mode: "enabled" };
   } else if (nimModel.includes('nemotron')) {
-    thinkingParams = { thinking: true };
+    thinkingParams = { enable_thinking: true };
   }
 }
 
